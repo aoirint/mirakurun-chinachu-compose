@@ -1,5 +1,8 @@
 # mirakurun-chinachu-compose
 
+- Mirakurun: https://github.com/aoirint/mirakurun-recdvb-docker
+- Chinachu: https://github.com/aoirint/chinachu-docker
+
 ```shell
 git clone https://github.com/aoirint/mirakurun-chinachu-compose.git /opt/mirakurun-chinachu-compose
 cd /opt/mirakurun-chinachu-compose
