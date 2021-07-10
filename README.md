@@ -6,7 +6,7 @@ cd /opt/mirakurun-chinachu-compose
 
 cp chinachu/conf/config.sample.json chinachu/conf/config.json
 
-chown -R 1000:1000 chinachu/ mirakurun/ work/
+chown -R 1000:1000 chinachu/ mirakurun/
 
 cp chinachu-docker-compose.service /etc/systemd/system/
 cp mirakurun-docker-compose.service /etc/systemd/system/
