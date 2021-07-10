@@ -41,6 +41,7 @@ services:
       - ./chinachu/conf/config.json:/usr/local/chinachu/config.json
       - ./chinachu/conf/rules.json:/usr/local/chinachu/rules.json
       - ./chinachu/data:/usr/local/chinachu/data
+      - ./chinachu/log:/usr/local/chinachu/log
       - "${RECORDED_DIR}:/usr/local/chinachu/recorded"
     depends_on:
       - mirakurun
