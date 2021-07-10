@@ -32,7 +32,8 @@ services:
 
   chinachu:
     image: aoirint/chinachu:latest
-    user: '1000:1000'
+    environment:
+      DOCKER: 'YES'
     ports:
       - '20772:20772'
     volumes:
