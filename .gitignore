@@ -1,0 +1,5 @@
+/mirakurun/env
+/work
+/.env*
+
+/docker-compose.override.yml

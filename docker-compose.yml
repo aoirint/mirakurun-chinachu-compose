@@ -1,0 +1,46 @@
+version: '3.8'
+services:
+  mirakurun:
+    image: aoirint/mirakurun-recdvb:latest
+    restart: always
+    cap_add:
+      - SYS_ADMIN
+      - SYS_NICE
+    environment:
+      TZ: Asia/Tokyo
+      #LOG_LEVEL: '3'
+      #DEBUG: 'true'
+    ports:
+      - '40772:40772'
+      - '9229:9229'
+    devices:
+      - /dev/bus:/dev/bus
+      - /dev/dvb:/dev/dvb
+    volumes:
+      - /dev/shm:/dev/shm
+      - './work:/work'
+      - '/etc/localtime:/etc/localtime:ro'
+      - './mirakurun/env/run:/var/run'
+      - './mirakurun/env/opt:/opt'
+      - './mirakurun/env/data:/app-data'
+      - './mirakurun/config:/app-config'
+    logging:
+      driver: json-file
+      options:
+        max-file: '1'
+        max-size: 10m
+
+  chinachu:
+    image: aoirint/chinachu:latest
+    user: '1000:1000'
+    ports:
+      - '20772:20772'
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - ./chinachu/conf/config.json:/usr/local/chinachu/config.json
+      - ./chinachu/conf/rules.json:/usr/local/chinachu/rules.json
+      - ./chinachu/data:/usr/local/chinachu/data
+      - "${RECORDED_DIR}:/usr/local/chinachu/recorded"
+    depends_on:
+      - mirakurun
+
