@@ -2,7 +2,6 @@ version: '3.8'
 services:
   mirakurun:
     image: aoirint/mirakurun-recdvb:latest
-    restart: always
     cap_add:
       - SYS_ADMIN
       - SYS_NICE
@@ -34,6 +33,7 @@ services:
     image: aoirint/chinachu:latest
     environment:
       DOCKER: 'YES'
+      TZ: Asia/Tokyo
     ports:
       - '20772:20772'
     volumes:
