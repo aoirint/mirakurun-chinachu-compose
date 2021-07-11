@@ -6,7 +6,7 @@ Type=simple
 Restart=always
 WorkingDirectory=/opt/mirakurun-chinachu-compose
 ExecStart=/usr/local/bin/docker-compose up chinachu
-ExecStopPost=/usr/local/bin/docker-compose rm -s -f chimachu
+ExecStopPost=/usr/local/bin/docker-compose rm -s -f chinachu
 
 [Install]
 WantedBy=multi-user.target
