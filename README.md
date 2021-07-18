@@ -1,6 +1,6 @@
 # mirakurun-chinachu-compose
 
-- Mirakurun: https://github.com/aoirint/mirakurun-recdvb-docker
+- Mirakurun: https://github.com/Chinachu/Mirakurun
 - Chinachu: https://github.com/aoirint/chinachu-docker
 
 ```shell
