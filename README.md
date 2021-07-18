@@ -4,6 +4,8 @@
 - Chinachu: https://github.com/aoirint/chinachu-docker
 
 ```shell
+sudo apt install dvb-tools
+
 git clone https://github.com/aoirint/mirakurun-chinachu-compose.git /opt/mirakurun-chinachu-compose
 cd /opt/mirakurun-chinachu-compose
 
