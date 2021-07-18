@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   mirakurun:
-    image: aoirint/mirakurun-recdvb:latest
+    image: chinachu/mirakurun:latest
     cap_add:
       - SYS_ADMIN
       - SYS_NICE
