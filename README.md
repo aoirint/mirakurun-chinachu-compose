@@ -23,3 +23,6 @@ systemctl enable chinachu-docker-compose.service
 systemctl restart chinachu-docker-compose.service
 ```
 
+## Notice
+
+Based on <https://github.com/Chinachu/docker-mirakurun-chinachu> (MIT License).
