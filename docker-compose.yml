@@ -30,7 +30,7 @@ services:
         max-size: 10m
 
   chinachu:
-    image: aoirint/chinachu:latest
+    image: aoirint/chinachu:0.10.7-aoirint.1
     environment:
       DOCKER: 'YES'
       TZ: Asia/Tokyo
