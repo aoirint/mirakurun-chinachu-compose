@@ -4,7 +4,7 @@ Description=Mirakurun Docker Compose
 [Service]
 Type=simple
 Restart=always
-WorkingDirectory=/opt/mirakurun-chinachu-compose
+WorkingDirectory=/mnt/haruhi/apps/tv/mirakurun-chinachu-compose
 ExecStart=/usr/bin/docker compose up mirakurun
 ExecStopPost=/usr/bin/docker compose rm -s -f mirakurun
 
